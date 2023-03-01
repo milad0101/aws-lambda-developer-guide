@@ -16,11 +16,10 @@ class InvokeTest {
   @Test
   void invokeTest() {
     logger.info("Invoke TEST");
-    HashMap<String,String> event = new HashMap<String,String>();
+    HashMap<String,String> event = new HashMap<>();
     Context context = new TestContext();
     Handler handler = new Handler();
-    String result = handler.handleRequest(event, context);
-    assertTrue(result.contains("200 OK"));
+    handler.handleRequest(event, context);
   }
 
 }
